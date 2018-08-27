@@ -9,7 +9,7 @@ module AjaxDatatablesRails
       end
 
       def filter_records(records)
-        records.where(build_conditions)
+        records.having(build_conditions).group(:id)
       end
 
       # rubocop:disable Style/EachWithObject
