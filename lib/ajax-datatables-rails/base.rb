@@ -110,7 +110,7 @@ module AjaxDatatablesRails
     end
 
     def records_filtered_count
-      filter_records(fetch_records).unscope(:group).count(:all)
+      filter_records(fetch_records).length
     end
 
     # Private helper methods
